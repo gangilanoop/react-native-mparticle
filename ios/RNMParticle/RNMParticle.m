@@ -348,6 +348,11 @@ typedef NS_ENUM(NSUInteger, MPReactCommerceEventAction) {
             [commerceEvent addImpression:product listName:listName];
         }];
     }];
+
+    NSDictionary *customAttributes = json[@"customAttributes"];
+    [commerceEvent setCustomAttributes:customAttributes];
+
+    
     
     return commerceEvent;
 }
